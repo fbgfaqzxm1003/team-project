@@ -11,7 +11,7 @@
 | M1 - AI Agent Core | **TBD** | LLM API adapter, prompt/tool loop, approved tool selection, provider errors | Fake-tool call works from Java, then connect to MCP |
 | M2 - MCP & Canvas Integration | **Chris Li (`@chrislxn`)** | Java MCP Client, integration with existing Python Canvas MCP Server, Canvas read-only tools and typed resource discovery | Java calls a live Canvas tool via MCP and returns a resource result |
 | M3 - Document Handling | **TBD** | Canvas file retrieval, optional on-demand cache, PDF input to selected model | One accessible PDF can be passed to the model |
-| M4 - Local Storage & To-Do | **TBD** | Task Entity, task operations, file-based DAO, task tests | Tasks can be created/completed and survive restart |
+| M4 - Local Storage & To-Do | **Anqi Feng (`@fbgfaqzxm1003`)** | Task Entity, task operations, file-based DAO, task tests | Tasks can be created/completed and survive restart |
 | M5 - Swing Frontend | **TBD** | Shared Swing screens and UI conventions; ViewModels, Controllers/Presenters coordination | Chat view with working submit/status/result flow |
 | M6 - Academic Features & Integration | **TBD** | Announcements/deadlines business rules, app composition and integration support | A runnable deadline/announcement workflow and AppBuilder wiring |
 
@@ -21,7 +21,7 @@ A **module owner** is responsible for its shared contracts, integration readines
 
 | Use Case | Lead | Acceptance Evidence |
 | --- | --- | --- |
-| UC1 - Manage Local To-Do | **TBD** | Create/list/complete/delete and persisted state |
+| UC1 - Manage Local To-Do | **Anqi Feng (`@fbgfaqzxm1003`)** | Create/list/complete/delete and persisted state |
 | UC2 - Find Canvas Resources | **Chris Li (`@chrislxn`)** | Resource discovery through MCP; display titles/types/source links |
 | UC3 - Ask About Canvas Pages | **TBD** | Agent reads a Page and answers with a source link |
 | UC4 - Ask About Canvas PDFs | **TBD** | Agent obtains a permitted PDF and answers with its source |
@@ -37,7 +37,7 @@ A **module owner** is responsible for its shared contracts, integration readines
 | `AgentGateway` | M1 | UC2-UC6 where AI is needed | Signature TBD |
 | `McpToolGateway` | **M2 (Chris Li)** | M1, M3, academic features | Actual Python server tools/transport to be audited |
 | `DocumentGateway` | M3 | UC4, M1 | Signature TBD |
-| `TaskRepository` | M4 | UC1, optionally UC6 | Signature TBD |
+| `TaskRepository` | M4（Anqi Feng) | UC1, optionally UC6 | Signature TBD |
 | Shared Chat UI / ViewModel contract | M5 | UC2-UC6 | Signature TBD |
 | AppBuilder composition | M6 | All modules | Wiring plan TBD |
 
